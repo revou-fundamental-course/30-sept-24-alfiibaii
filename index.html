@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale-1.0">
+        <title>Konversi Suhu</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <h2 class="title">Kalkulator Konversi Suhu</h2>
+            <hr />
+        </header>
+        
+        <main>
+            <!-- Form Content -->
+            <section>
+                <!-- Instruksi -->
+                <article>
+                    <p>Masukkan suhu derajat Celcius (&deg;C) ke kotak dibawah, lalu klik tombol konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenteit (&deg;F)</p>
+                </article>
+
+                <!-- Inputan Suhu -->
+                <form class="padding-16">
+                    <div>
+                        <label for="celsius" class="block">Celcius (&deg;C) :</label>
+                    </div>
+                    <div>
+                        <textarea id="celsius" class="textarea" name="celcius" placeholder="masukkan suhu"></textarea>
+                    </div>
+                <!-- Button -->
+                    <button type="button" onclick="convert()" class="form-btn-submit">Konversi</button>
+                    <button type="button" onclick="reset()" class="form-btn-reset">Reset</button>
+                    <button type="button" onclick="reverse()" class="form-btn-reverse">Reverse</button>
+                </form>
+
+                <!-- Hasil Inputan -->
+                <div class="padding-16">
+                    <div>
+                        <label for="fahrenheit" class="block">Fahrenteit (&deg;F) :</label>
+                    </div> 
+                    <div>
+                        <textarea id="fahrenheit" class="textarea"></textarea>
+                    </div>
+                </div>
+
+                <!-- Cara Kalkulasi -->
+                <div class="padding-16">
+                    <div>
+                        <label for="calculation" class="block">Cara Kalkulasi :</label>
+                    </div>
+                    <div>
+                        <textarea id="calculation" class="textarea"></textarea>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <span class="link" onclick="toggleConversion()">Fahrenheit ke Celsius</span>
+                </div>
+            </section>
+            <br>
+            <!-- Info Content -->
+            <section>
+                <header>
+                    <h2 id="conversionTitle" class="titledua">Cara Konversi Celcius (&deg;C) ke Farenheit (&deg;F)</h2>
+                </header>
+                <hr />
+                <article>
+                    <p class="mt-4" id="conversionText">Suhu 
+                        <span class="suhu-style">S</span> dalam derajat Fahrenteit (&deg;F) sama dengan suhu <span class="suhu-style">S</span> dalam derajat Celsius (&deg;C) kali <sup>9</sup>/<sub>5</sub> tambah <span class="italic">32</span>.
+                    </p>
+                    <div class="formula" id="conversionFormula">
+                        <p class="italic">S<sub>(°F)</sub> = (S<sub>(°C)</sub> * 9/5) + 32</p>
+                        <p class="mt-4">atau</p>
+                        <p class="italic">S<sub>(°F)</sub> = (S<sub>(°C)</sub> * 1.8) + 32</p>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <br>
+
+        <!-- Footer Section -->
+        <footer>
+            <div>
+                <button class="me" onclick="window.open('https://www.instagram.com/alfiibai', '_blank')" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i> Alfi Baihaqi
+                </button> 
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="./js/index.js"></script>
+        </section>
+        <br>
+    </body>
+</html>
